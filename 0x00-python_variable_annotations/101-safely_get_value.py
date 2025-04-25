@@ -1,20 +1,12 @@
 #!/usr/bin/env python3
-"""Contains method that safely gets value from dictionary."""
-from typing import Mapping, Any, Union, TypeVar, Optional
-
+"""Advanced type annotated function"""
+from typing import Any, Mapping, TypeVar, Union
 T = TypeVar('T')
 
 
-def safely_get_value(dct: Mapping, key: Any,
-                     default: Optional[T] = None) -> Union[Any, T]:
-    """Safely gets value from dictionary.
-    Args:
-        dct (dict): Dictionary to get value from.
-        key (str): Key to get value from.
-        default (any): Default value to return if key is not found.
-    Returns:
-        Value from dictionary.
-    """
+def safely_get_value(dct: Mapping, key: Any, default: Union[T, None]
+                     = None) -> Union[Any, T]:
+    """More type annotations"""
     if key in dct:
         return dct[key]
     else:

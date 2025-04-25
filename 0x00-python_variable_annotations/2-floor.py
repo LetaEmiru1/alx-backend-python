@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
-"""Contains a single function that calculates the floor of a number."""
-import math
+"""Type-annotated function floor"""
 
 
 def floor(n: float) -> int:
-    """Returns the floor of a float."""
-    return math.floor(n)
+    """Returns floor of a float passed to it"""
+    return int(n)

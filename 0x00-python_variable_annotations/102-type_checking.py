@@ -1,27 +1,18 @@
 #!/usr/bin/env python3
-"""
-Contains a function that returns  a list of integers
-multiplied by certain factor.
-"""
-from typing import Tuple, List
+"""Defines Type checking"""
+from typing import List, Tuple
 
 
 def zoom_array(lst: Tuple, factor: int = 2) -> List:
-    """Returns a list of integers multiplied by certain factor.
-    Args:
-        lst: A tuple of integers.
-        factor: An integer.
-    Returns:
-        A list of integers.
-    """
+    """Type Checking Exercise"""
     zoomed_in: List = [
         item for item in lst
-        for i in range(factor)
+        for i in range(int(factor))
     ]
     return zoomed_in
 
 
-array: Tuple = (12, 72, 91)
+array = (12, 72, 91)
 
 zoom_2x = zoom_array(array)
 
